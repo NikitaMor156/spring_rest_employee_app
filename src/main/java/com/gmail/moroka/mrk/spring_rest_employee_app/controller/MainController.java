@@ -30,7 +30,7 @@ public class MainController {
     }
 
     @PostMapping("/employees") // If id of employee object is not specified than creates a new object in DB
-    //                               If not - updates existing object in DB
+    //                               If it is (empl. already exists) - updates existing object in DB
     public void saveEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
     }
